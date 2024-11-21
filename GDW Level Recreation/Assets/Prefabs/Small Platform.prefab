@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8923548976775442120}
   - component: {fileID: 4592829359444731527}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilesetv3_128
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751107998580455138}
   - component: {fileID: 3009094484547519977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilesetv3_129
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6563194432596841878}
   - component: {fileID: 1654628090213852485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilesetv3_130
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6332860918279033997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Small Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
