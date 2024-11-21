@@ -12,14 +12,28 @@ public class PlayerController : MonoBehaviour
     public float jumpingPower;
     private bool isFacingRight = true;
 
+    private bool dashBool = false;
+    private float dashTime = 0f;
+    [SerializeField] private int DashSpeed = 50;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform GroundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    void Update()
+    void Start()
     {
 
-        horizontal = Input.GetAxisRaw("Horizontal");
+        dashBool = true;
+    }
+
+
+
+
+
+    void Update()
+    {
+        if(dashTime<=0f)
+            horizontal = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -31,12 +45,27 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
+
+        // dash input 
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            if(dashBool)
+                dashTime = 0.12f;
+
+        }
+
+
+
+
+
+
         Flip();
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        Dash();
     }
 
     private bool IsGrounded()
@@ -53,5 +82,18 @@ public class PlayerController : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+
+    private void Dash()
+    {
+        dashTime-=Time.deltaTime;
+
+        if(dashTime>0)
+        {
+            rb.velocity = new Vector2(horizontal*DashSpeed, rb.velocity.y);
+
+        }
+        
     }
 }
