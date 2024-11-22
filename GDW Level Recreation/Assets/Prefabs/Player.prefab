@@ -258,6 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpingPower: 8
+  DashSpeed: 50
   rb: {fileID: 1752189383211063216}
   GroundCheck: {fileID: 0}
   groundLayer:
