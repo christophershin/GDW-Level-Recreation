@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform GroundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    public Animator animator;
+
     void Start()
     {
 
@@ -54,10 +56,16 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if (horizontal != 0f)
+        {
+            animator.SetBool("isWalking", true);
+            Debug.Log("Walking");
+        }
 
-
-
-
+        if (horizontal == 0f)
+        {
+            animator.SetBool("isWalking", false);
+        }
 
         Flip();
     }
