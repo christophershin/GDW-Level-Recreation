@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1238964244559876227}
   - component: {fileID: 1917615894833458062}
-  - component: {fileID: -7630158902363074240}
   - component: {fileID: 8908014476418157594}
+  - component: {fileID: 2229178705536965963}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 7385695766723387474}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4592274, y: -0.21100715, z: 0}
-  m_LocalScale: {x: 0.6647, y: 0.6647, z: 0.6647}
+  m_LocalPosition: {x: -0.025, y: -0.025, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.6647}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d39f8fade7066e4c9bb3e84f69a48b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,8 +86,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-7630158902363074240
-BoxCollider2D:
+--- !u!114 &8908014476418157594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385695766723387474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4315417af23d5034790095bce4c59b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 2
+  maxTime: 1
+--- !u!60 &2229178705536965963
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,26 +136,29 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.66, y: 4.01}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &8908014476418157594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7385695766723387474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4315417af23d5034790095bce4c59b10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 2
-  maxTime: 1
+  m_Points:
+    m_Paths:
+    - - {x: 0.79999995, y: 0.515}
+      - {x: 0.7, y: 0.965}
+      - {x: 0.64980376, y: 1.1143608}
+      - {x: 0.57, y: 1.3349999}
+      - {x: 0.45999998, y: 1.625}
+      - {x: 0.22999999, y: 1.8349999}
+      - {x: -0.19, y: 1.8349999}
+      - {x: -0.32999998, y: 1.7249999}
+      - {x: -0.45999998, y: 1.5949999}
+      - {x: -0.59999996, y: 1.3249999}
+      - {x: -0.82, y: 0.555}
+      - {x: -0.82, y: -1.755}
+      - {x: -0.58, y: -1.885}
+      - {x: -0.29, y: -1.985}
+      - {x: 0.22, y: -1.985}
+      - {x: 0.53999996, y: -1.885}
+      - {x: 0.79999995, y: -1.745}
+  m_UseDelaunayMesh: 0
