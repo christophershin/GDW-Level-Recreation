@@ -9,6 +9,7 @@ public class bulletScript : MonoBehaviour
     public float bulletSpeed;
     public float maxTime = 1;
     private float time;
+    public GameObject parent;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +26,16 @@ public class bulletScript : MonoBehaviour
             Destroy(this.gameObject);
         
         transform.position += transform.up * Time.deltaTime * bulletSpeed;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if(other.gameObject.layer == 6){
+            Destroy(this.gameObject);
+        }
+
+
+
     }
 }

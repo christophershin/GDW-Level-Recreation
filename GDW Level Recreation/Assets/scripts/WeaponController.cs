@@ -13,6 +13,7 @@ public class WeaponController : MonoBehaviour
     
 
     private GameObject playerParent;
+    private GameObject ID;
 
 
 
@@ -22,7 +23,7 @@ public class WeaponController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ID = this.gameObject;
     }
 
     // Update is called once per frame
@@ -72,6 +73,7 @@ public class WeaponController : MonoBehaviour
         newBullet.transform.position = transform.position;
         newBullet.transform.rotation = transform.rotation;
         newBullet.GetComponent<bulletScript>().bulletSpeed = bulletforce;
+        newBullet.GetComponent<bulletScript>().parent = ID;
 
     }
 
