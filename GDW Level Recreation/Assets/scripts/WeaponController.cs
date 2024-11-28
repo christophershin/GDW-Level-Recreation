@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WeaponController : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class WeaponController : MonoBehaviour
     [SerializeField] private int bulletforce = 1;
     [SerializeField] private float maxUnload = 0.01f;
     [SerializeField] private int MaxAmmo = 40;
+    [SerializeField] private TMP_Text TextAmmo;
     [SerializeField] private float MaxReload = 1f;
+    
     private float reload;
     private int ammo;
     private float unloadSpeed;
@@ -56,6 +59,7 @@ public class WeaponController : MonoBehaviour
 
         Shooting();
         Reload();
+        texts();
 
 
         
@@ -132,6 +136,14 @@ public class WeaponController : MonoBehaviour
             playerParent = other.gameObject;
 
         }
+
+
+    }
+
+
+    private void texts()
+    {
+        TextAmmo.text = "Ammo: " + ammo;
 
 
     }

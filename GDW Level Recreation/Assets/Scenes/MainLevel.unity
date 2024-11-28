@@ -479,6 +479,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 31.999973, y: 1.0018175}
   m_EdgeRadius: 0
+--- !u!114 &1054338628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2170594885743722871, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+  m_PrefabInstance: {fileID: 4194463947241810634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1143165502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1393133330560894213, guid: 93a5a688379c4964280edfa1f9b52c10, type: 3}
@@ -1093,6 +1104,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8802496564330988358, guid: 93a5a688379c4964280edfa1f9b52c10, type: 3}
+      propertyPath: TextAmmo
+      value: 
+      objectReference: {fileID: 1054338628}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
