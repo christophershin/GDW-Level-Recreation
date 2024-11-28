@@ -8,7 +8,13 @@ public class WeaponController : MonoBehaviour
 
     [SerializeField] private GameObject bullet;
     [SerializeField] private int bulletforce = 1;
-    [SerializeField] private float unloadSpeed;
+    [SerializeField] private float maxUnload = 0.01f;
+    [SerializeField] private int MaxAmmo = 40;
+    [SerializeField] private float MaxReload = 1f;
+    private float reload;
+    private int ammo;
+    private float unloadSpeed;
+    private bool Attack = false;
     private Vector3 offset;
     
 
@@ -24,11 +30,15 @@ public class WeaponController : MonoBehaviour
     void Start()
     {
         ID = this.gameObject;
+        ammo = MaxAmmo;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        unloadSpeed -= Time.deltaTime;
+        reload -= Time.deltaTime;
 
         // Aiming {
         Vector3 mousePosition = Input.mousePosition;
@@ -37,26 +47,32 @@ public class WeaponController : MonoBehaviour
         transform.up = target;
         //}
 
-        unloadSpeed -= Time.deltaTime;
-
         if(playerParent!=null)
         {
             //follow the player
             transform.position = playerParent.transform.position;
-
         }
 
 
+        Shooting();
+        Reload();
 
-            
 
         
         if(Input.GetMouseButton(0))
         {
+            if(ammo>0)
+            {
+                Attack = true;
+            }
+                
 
-            createBullet();
+        }else{
+            Attack = false;
+            unloadSpeed = 0f;
 
         }
+
 
 
 
@@ -74,6 +90,34 @@ public class WeaponController : MonoBehaviour
         newBullet.transform.rotation = transform.rotation;
         newBullet.GetComponent<bulletScript>().bulletSpeed = bulletforce;
         newBullet.GetComponent<bulletScript>().parent = ID;
+
+    }
+
+
+    private void Shooting()
+    {
+
+        if(ammo>0 && unloadSpeed<=0f && Attack == true)
+        {
+            createBullet();
+            ammo--;
+            unloadSpeed = maxUnload;
+
+        }else{
+            reload = MaxReload;
+        }
+
+    }
+
+    private void Reload()
+    {
+        if(ammo<MaxAmmo && !Attack && reload<=0f)
+        {
+            ammo = MaxAmmo;
+            Debug.Log("full");
+
+        }
+
 
     }
 

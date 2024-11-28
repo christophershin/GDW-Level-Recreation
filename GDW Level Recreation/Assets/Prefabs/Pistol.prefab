@@ -100,6 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7385695766723387474, guid: 35625bf83d5bc5342a8bf397090cb5d8, type: 3}
   bulletforce: 50
+  maxUnload: 0.09
+  MaxAmmo: 40
+  MaxReload: 1
 --- !u!61 &4171840638400016240
 BoxCollider2D:
   m_ObjectHideFlags: 0
