@@ -169,7 +169,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &3587081125787358787
@@ -181,7 +181,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3253677921748073126}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2cfd99c4296eaa241962c2ce5b55692b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -259,8 +259,11 @@ MonoBehaviour:
   speed: 10
   jumpingPower: 8
   DashSpeed: 50
+  MaxDashCoolDown: 1
+  dashBar: {fileID: 0}
   rb: {fileID: 1752189383211063216}
   GroundCheck: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  animator: {fileID: 0}
