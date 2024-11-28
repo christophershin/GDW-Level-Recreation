@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     private bool dashBool = false;
     private float dashTime = 0f;
     [SerializeField] private int DashSpeed = 50;
+    [SerializeField] private float MaxDashCoolDown = 1;
+    [SerializeField] private Image dashBar;
+    private float DashCoolDown;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform GroundCheck;
@@ -34,27 +37,34 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        DashCoolDown+=Time.deltaTime;
+
         if(dashTime<=0f)
             horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
 
-        // dash input 
-        if(Input.GetKeyDown(KeyCode.W))
+        // dash input
+        if(DashCoolDown>=MaxDashCoolDown)
         {
-            if(dashBool)
-                dashTime = 0.12f;
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                if(dashBool)
+                    dashTime = 0.12f;
+                    DashCoolDown = 0;
 
+            }
         }
+
 
         if (horizontal != 0f)
         {
@@ -102,6 +112,8 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(horizontal*DashSpeed, rb.velocity.y);
 
         }
+
+        dashBar.fillAmount = DashCoolDown/MaxDashCoolDown;
         
     }
 }
