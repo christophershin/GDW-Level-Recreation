@@ -34,6 +34,7 @@ public class WeaponController : MonoBehaviour
     {
         ID = this.gameObject;
         ammo = MaxAmmo;
+        reload = MaxReload;
     }
 
     // Update is called once per frame
@@ -41,7 +42,11 @@ public class WeaponController : MonoBehaviour
     {
 
         unloadSpeed -= Time.deltaTime;
-        reload -= Time.deltaTime;
+        if(!Attack)
+        {
+            reload -= Time.deltaTime;
+        }
+        
 
         // Aiming {
         Vector3 mousePosition = Input.mousePosition;
@@ -57,9 +62,7 @@ public class WeaponController : MonoBehaviour
         }
 
 
-        Shooting();
-        Reload();
-        texts();
+
 
 
         
@@ -68,6 +71,8 @@ public class WeaponController : MonoBehaviour
             if(ammo>0)
             {
                 Attack = true;
+            }else{
+                Attack = false;
             }
                 
 
@@ -77,7 +82,9 @@ public class WeaponController : MonoBehaviour
 
         }
 
-
+        Shooting();
+        Reload();
+        texts();
 
 
 
@@ -107,18 +114,17 @@ public class WeaponController : MonoBehaviour
             ammo--;
             unloadSpeed = maxUnload;
 
-        }else{
-            reload = MaxReload;
         }
 
     }
 
     private void Reload()
     {
-        if(ammo<MaxAmmo && !Attack && reload<=0f)
+        if(ammo<MaxAmmo && Attack == false && reload<=0f)
         {
             ammo = MaxAmmo;
             Debug.Log("full");
+            reload = MaxReload;
 
         }
 
