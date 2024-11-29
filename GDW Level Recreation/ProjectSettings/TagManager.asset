@@ -11,6 +11,7 @@ TagManager:
   - LostSoul
   - Skull
   - Imp
+  - WallTrigger
   layers:
   - Default
   - TransparentFX

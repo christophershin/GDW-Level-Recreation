@@ -1832,6 +1832,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4833115279836824985, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
   m_PrefabInstance: {fileID: 665220375}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &910912229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5570257042946591643, guid: 1a66cc66698ff0445b3cadfa5b8cd161, type: 3}
+  m_PrefabInstance: {fileID: 504035184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &972898240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5672224034434887002, guid: 1a66cc66698ff0445b3cadfa5b8cd161, type: 3}
@@ -3923,6 +3928,10 @@ PrefabInstance:
       propertyPath: GroundCheck
       value: 
       objectReference: {fileID: 1723253774}
+    - target: {fileID: 7688578737356972283, guid: 7e972136c2b01cf4689d69c09df0d834, type: 3}
+      propertyPath: appearingDoor
+      value: 
+      objectReference: {fileID: 910912229}
     - target: {fileID: 8341165378942878222, guid: 7e972136c2b01cf4689d69c09df0d834, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
