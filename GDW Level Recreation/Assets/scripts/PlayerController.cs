@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private float horizontal;
-    public int HP = 4;
+    public int MaxPlayerHP = 4;
+    public int PlayerHP;
     public float speed;
     public float jumpingPower;
     private float jumpMultiplier;
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-
+        PlayerHP = MaxPlayerHP;
         dashBool = true;
     }
 
@@ -73,8 +74,16 @@ public class PlayerController : MonoBehaviour
         }
 
 
+
         // increase falling speed for more natural feel.
         gravityMulitplication();
+
+
+        if(PlayerHP<=0)
+        {
+            PlayerHP =0;
+            Debug.Log("GAME OVER");
+        }
 
 
 
@@ -126,6 +135,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
 
 
     private void Dash()
