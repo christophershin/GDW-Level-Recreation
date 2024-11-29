@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3833127367761070394}
   - component: {fileID: 984545547227799157}
   - component: {fileID: 5921085388943154028}
+  - component: {fileID: 1708652640426652785}
   m_Layer: 0
   m_Name: Imp Enemy
   m_TagString: Enemy
@@ -179,4 +180,21 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &1708652640426652785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372746190196711145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5a989b61fc27a54aae861ecb256b0c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2.5
+  moveAmount: 1
+  enemy: {fileID: 5921085388943154028}
+  moveleft: 1
+  moveright: 0
