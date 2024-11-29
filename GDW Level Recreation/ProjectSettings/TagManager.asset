@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - DeathBox
+  - Torch
+  - Cacodemon
+  - LostSoul
+  - Skull
+  - Imp
   layers:
   - Default
   - TransparentFX
