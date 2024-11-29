@@ -738,6 +738,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2170594885743722871, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2bd6b3593fc3c1443aec0cf4585ff94f, type: 2}
+    - target: {fileID: 2170594885743722871, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 966683313887176887, guid: 2bd6b3593fc3c1443aec0cf4585ff94f, type: 2}
+    - target: {fileID: 2170594885743722871, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4655409982707198340, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -840,6 +852,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6284787582073597078, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364833995246890018, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2bd6b3593fc3c1443aec0cf4585ff94f, type: 2}
+    - target: {fileID: 6364833995246890018, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 966683313887176887, guid: 2bd6b3593fc3c1443aec0cf4585ff94f, type: 2}
+    - target: {fileID: 6364833995246890018, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7251976782836910435, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
