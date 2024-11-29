@@ -34,7 +34,7 @@ public class UI_Layout : MonoBehaviour
     void Update()
     {   
         num.text = "Player: " + numShown;
-        if(numShown!=player.GetComponent<PlayerController>().PlayerHP)
+        if(numShown!=player.GetComponent<PlayerController>().PlayerHP && numShown!=0)
         {
 
             numShown = player.GetComponent<PlayerController>().PlayerHP;

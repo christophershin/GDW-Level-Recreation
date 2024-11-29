@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
         if(PlayerHP<=0)
         {
-            PlayerHP =0;
+            PlayerHP = 0;
             Debug.Log("GAME OVER");
         }
 
