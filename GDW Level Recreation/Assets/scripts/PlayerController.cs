@@ -8,12 +8,20 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private float horizontal;
+    public int HP = 4;
     public float speed;
     public float jumpingPower;
+    private float jumpMultiplier;
+    private float gravityMultiplier; 
+    [SerializeField] private float maxGravityMulti = 1f;
+
     private bool isFacingRight = true;
 
     private bool dashBool = false;
     private float dashTime = 0f;
+    
+    
+
     [SerializeField] private int DashSpeed = 50;
     [SerializeField] private float MaxDashCoolDown = 1;
     [SerializeField] private Image dashBar;
@@ -42,15 +50,32 @@ public class PlayerController : MonoBehaviour
         if(dashTime<=0f)
             horizontal = Input.GetAxisRaw("Horizontal");
 
+
+        // jumping 
         if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
         {
+            gravityMultiplier = 0f;
+            jumpMultiplier = 1f;
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            
+            if(jumpMultiplier>0f)
+            {
+                jumpMultiplier-=Time.deltaTime;
+            }
+
         }
 
         if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.2f);
+            rb.velocity -= new Vector2(0, jumpMultiplier);
+            
         }
+
+
+        // increase falling speed for more natural feel.
+        gravityMulitplication();
+
 
 
         // dash input
@@ -115,5 +140,20 @@ public class PlayerController : MonoBehaviour
 
         dashBar.fillAmount = DashCoolDown/MaxDashCoolDown;
         
+    }
+
+    private void gravityMulitplication(){
+        if(rb.velocity.y < 0 && !IsGrounded()){
+
+            gravityMultiplier += Time.deltaTime;
+
+            if(gravityMultiplier<maxGravityMulti)
+            {
+                rb.velocity -= new Vector2(0,gravityMultiplier);
+            }
+            
+
+        }
+
     }
 }
