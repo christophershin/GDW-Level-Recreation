@@ -18,10 +18,14 @@ public class EnemyMovement : MonoBehaviour
     public Rigidbody2D enemy;
     private Vector2 Movement;
     private float OriginalX;
+    private float OriginalY;
     private float endX;
+    private float endY;
 
     private bool atEnd;
 
+    public bool moveup;
+    public bool movedown;
     public bool moveleft;
     public bool moveright;
 
@@ -30,9 +34,18 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         OriginalX = transform.position.x;
+        OriginalY = transform.position.y;
         atEnd = false;
         isFacingRight = false;
 
+        if (moveup)
+        {
+            endY = OriginalY + moveAmount;
+        }
+        if (movedown)
+        {
+            endY = OriginalY - moveAmount;
+        }
         if (moveleft)
         {
             endX = OriginalX - moveAmount;
@@ -46,6 +59,47 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         invincibleTimer-=Time.deltaTime;
+
+        if (moveup)
+        {
+            if (!atEnd && transform.position.y < endY)
+            {
+                MoveUP();
+            }
+            else if (transform.position.y >= endY)
+            {
+                atEnd = true;
+            }
+            if (atEnd && transform.position.y > OriginalY)
+            {
+                MoveDOWN();
+            }
+            else if (transform.position.y <= OriginalY)
+            {
+                atEnd = false;
+            }
+        }
+
+        if (movedown)
+        {
+            if (!atEnd && transform.position.y > endY)
+            {
+                MoveDOWN();
+            }
+            else if (transform.position.y <= endY)
+            {
+                atEnd = true;
+            }
+            if (atEnd && transform.position.y < OriginalY)
+            {
+                MoveUP();
+            }
+            else if (transform.position.y >= OriginalY)
+            {
+                atEnd = false;
+            }
+        }
+
         if (moveleft)
         {
             if (!atEnd && transform.position.x > endX)
