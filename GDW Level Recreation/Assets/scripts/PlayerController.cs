@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
 
+    public GameObject appearingDoor;
+
     void Start()
     {
         PlayerHP = MaxPlayerHP;
@@ -176,6 +178,13 @@ public class PlayerController : MonoBehaviour
         {
             PlayerHP = 0;
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "WallTrigger")
+        {
+            appearingDoor.SetActive(true);
+        }
     }
 }
