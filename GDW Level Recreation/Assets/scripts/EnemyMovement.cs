@@ -8,6 +8,12 @@ public class EnemyMovement : MonoBehaviour
 {
     public float moveSpeed;
     public float moveAmount;
+    public int enemyDamage = 1;
+
+    public float invincibleTimeMax = 1;
+    private float invincibleTimer; 
+    private bool damageBool = false;
+    private GameObject player;
 
     public Rigidbody2D enemy;
     private Vector2 Movement;
@@ -39,6 +45,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        invincibleTimer-=Time.deltaTime;
         if (moveleft)
         {
             if (!atEnd && transform.position.x > endX)
@@ -82,6 +89,8 @@ public class EnemyMovement : MonoBehaviour
         //Normalize the moveInput to have magnitude of 1
         Movement.Normalize();
 
+        DamagePlayer(player);
+
         enemy.velocity = Movement * moveSpeed;
 
         Flip();
@@ -120,6 +129,31 @@ public class EnemyMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Player"){
+
+            damageBool = true;
+            player = other.gameObject;
+        }
+    }
+
+
+
+
+
+    private void DamagePlayer(GameObject inst){
+
+        if(invincibleTimer<=0 && damageBool == true)
+        {
+            inst.gameObject.GetComponent<PlayerController>().PlayerHP-=enemyDamage;
+            invincibleTimer = invincibleTimeMax;
+        }else if(invincibleTimer>0){
+            damageBool = false;
+        }
+
     }
 }
 

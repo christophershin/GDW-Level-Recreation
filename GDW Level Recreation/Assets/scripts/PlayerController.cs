@@ -161,8 +161,15 @@ public class PlayerController : MonoBehaviour
             {
                 rb.velocity -= new Vector2(0,gravityMultiplier);
             }
-            
+        }
+    }
 
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "DeathBox")
+        {
+            PlayerHP = 0;
         }
 
     }
