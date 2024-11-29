@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1386097289591752205}
   m_Layer: 0
   m_Name: Cacodemon 1
-  m_TagString: Enemy
+  m_TagString: Cacodemon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,6 +105,8 @@ MonoBehaviour:
   enemyDamage: 1
   invincibleTimeMax: 1
   enemy: {fileID: 8525738341664870386}
+  moveup: 0
+  movedown: 0
   moveleft: 1
   moveright: 0
 --- !u!58 &1163824783012116024

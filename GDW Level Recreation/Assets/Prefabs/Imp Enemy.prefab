@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1708652640426652785}
   m_Layer: 0
   m_Name: Imp Enemy
-  m_TagString: Enemy
+  m_TagString: Imp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,6 +195,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2.5
   moveAmount: 1
+  enemyDamage: 1
+  invincibleTimeMax: 1
   enemy: {fileID: 5921085388943154028}
+  moveup: 0
+  movedown: 0
   moveleft: 1
   moveright: 0

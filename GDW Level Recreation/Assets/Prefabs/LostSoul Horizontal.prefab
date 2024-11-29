@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3945502243586460670}
   m_Layer: 0
   m_Name: LostSoul Horizontal
-  m_TagString: Enemy
+  m_TagString: LostSoul
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

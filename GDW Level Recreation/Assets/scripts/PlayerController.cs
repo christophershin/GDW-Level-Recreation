@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -20,8 +22,9 @@ public class PlayerController : MonoBehaviour
 
     private bool dashBool = false;
     private float dashTime = 0f;
-    
-    
+
+    public int playerscore;
+    public TMP_Text score;
 
     [SerializeField] private int DashSpeed = 50;
     [SerializeField] private float MaxDashCoolDown = 1;
@@ -110,6 +113,8 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
+
+        score.text = $"Score: {playerscore}";
 
         Flip();
     }
