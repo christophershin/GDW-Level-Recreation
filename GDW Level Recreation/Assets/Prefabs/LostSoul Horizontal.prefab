@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3945502243586460670}
   m_Layer: 0
   m_Name: LostSoul Horizontal
-  m_TagString: LostSoul
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +108,12 @@ MonoBehaviour:
   movedown: 0
   moveleft: 0
   moveright: 1
+  health: 5
+  torch: 0
+  imp: 0
+  skull: 0
+  soul: 1
+  cacodemon: 0
 --- !u!50 &997969726781641334
 Rigidbody2D:
   serializedVersion: 4

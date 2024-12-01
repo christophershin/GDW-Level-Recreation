@@ -31,6 +31,13 @@ public class EnemyMovement : MonoBehaviour
 
     private bool isFacingRight;
 
+    public int health;
+    public bool torch;
+    public bool imp;
+    public bool skull;
+    public bool soul;
+    public bool cacodemon;
+
     private void Start()
     {
         OriginalX = transform.position.x;

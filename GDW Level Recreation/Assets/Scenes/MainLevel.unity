@@ -377,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372746190196711145, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
       propertyPath: m_Name
-      value: Imp Enemy (3)
+      value: Imp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1465,7 +1465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372746190196711145, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
       propertyPath: m_Name
-      value: Imp Enemy (2)
+      value: Imp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1546,7 +1546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372746190196711145, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
       propertyPath: m_Name
-      value: Imp Enemy (5)
+      value: Imp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1820,7 +1820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372746190196711145, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
       propertyPath: m_Name
-      value: Imp Enemy (1)
+      value: Imp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2238,7 +2238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372746190196711145, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
       propertyPath: m_Name
-      value: Imp Enemy (4)
+      value: Imp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3209,7 +3209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372746190196711145, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
       propertyPath: m_Name
-      value: Imp Enemy (6)
+      value: Imp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3289,7 +3289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372746190196711145, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
       propertyPath: m_Name
-      value: Imp Enemy (7)
+      value: Imp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3350,7 +3350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372746190196711145, guid: fee7a077f2068a148915d12a22b398f8, type: 3}
       propertyPath: m_Name
-      value: Imp Enemy
+      value: Imp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3579,6 +3579,14 @@ PrefabInstance:
     - target: {fileID: 1625978079289952186, guid: 56d50521d524c3440b69d55078f5f5bd, type: 3}
       propertyPath: m_Name
       value: LostSoul Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625978079289952186, guid: 56d50521d524c3440b69d55078f5f5bd, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017338336246662336, guid: 56d50521d524c3440b69d55078f5f5bd, type: 3}
+      propertyPath: soul
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6391044478992342084, guid: 56d50521d524c3440b69d55078f5f5bd, type: 3}
       propertyPath: m_LocalPosition.x

@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5921085388943154028}
   - component: {fileID: 1708652640426652785}
   m_Layer: 0
-  m_Name: Imp Enemy
-  m_TagString: Imp
+  m_Name: Imp
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,3 +202,9 @@ MonoBehaviour:
   movedown: 0
   moveleft: 1
   moveright: 0
+  health: 3
+  torch: 0
+  imp: 1
+  skull: 0
+  soul: 0
+  cacodemon: 0

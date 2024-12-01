@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8686765145969183513}
   m_Layer: 0
   m_Name: LostSoul Vertical
-  m_TagString: Skull
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,12 @@ MonoBehaviour:
   movedown: 0
   moveleft: 0
   moveright: 0
+  health: 8
+  torch: 0
+  imp: 0
+  skull: 1
+  soul: 0
+  cacodemon: 0
 --- !u!50 &7778900008749172567
 Rigidbody2D:
   serializedVersion: 4
