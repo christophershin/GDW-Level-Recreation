@@ -6,12 +6,15 @@ TagManager:
   tags:
   - Enemy
   - DeathBox
+<<<<<<< Updated upstream
   - Torch
   - Cacodemon
   - LostSoul
   - Skull
   - Imp
   - WallTrigger
+=======
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
