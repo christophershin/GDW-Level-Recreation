@@ -22,7 +22,7 @@ public class EnemyScript : MonoBehaviour
 
     public GameObject Player;
 
-    ##public PlayerHP HP;
+    //public PlayerHP HP;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class EnemyScript : MonoBehaviour
         startY = transform.position.y;
         xpos = transform.position.x;
         ypos = transform.position.y;
-        ##HP = gameObject.find("Player").GetComponent<PlayerHP>;
+        //HP = gameObject.find("Player").GetComponent<PlayerHP>;
     }
 
     // Update is called once per frame
@@ -88,10 +88,10 @@ public class EnemyScript : MonoBehaviour
         {
             EnemySpeed = EnemySpeed * -1;
         }
-        ##if (Collision.gameObject.CompareTag("Player"))
-        ##{
-            
-        ##}
+        //if (Collision.gameObject.CompareTag("Player"))
+        //{
+        //  
+        //}
     }
 
     void Swoop()
