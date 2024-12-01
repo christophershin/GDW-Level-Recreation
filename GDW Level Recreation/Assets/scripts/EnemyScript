@@ -85,6 +85,10 @@ public class EnemyScript : MonoBehaviour
         {
             EnemySpeed = EnemySpeed * -1;
         }
+        ##if (Collision.gameObject.CompareTag("Player"))
+        ##{
+
+        ##}
     }
 
     void Swoop()
