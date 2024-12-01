@@ -61,10 +61,16 @@ public class EnemyMovement : MonoBehaviour
         {
             endX = OriginalX + moveAmount;
         }
+
+            
+
     }
 
     void Update()
     {
+
+        
+        
         invincibleTimer-=Time.deltaTime;
 
         if (moveup)

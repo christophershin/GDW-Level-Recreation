@@ -318,6 +318,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+--- !u!1 &43094609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2433985768757396294, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+  m_PrefabInstance: {fileID: 43094608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &58024753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6391044478992342084, guid: 56d50521d524c3440b69d55078f5f5bd, type: 3}
@@ -2413,6 +2418,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+--- !u!1 &1326834949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2433985768757396294, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+  m_PrefabInstance: {fileID: 1326834948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1385525407 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8346437430863563003, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
@@ -2679,6 +2689,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+--- !u!1 &1477549886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2433985768757396294, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+  m_PrefabInstance: {fileID: 1477549885}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1489299642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3389,6 +3404,22 @@ PrefabInstance:
       propertyPath: BlackScreen
       value: 
       objectReference: {fileID: 1499969921}
+    - target: {fileID: 3589961600787683720, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: cacoDemons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589961600787683720, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: cacoDemons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1326834949}
+    - target: {fileID: 3589961600787683720, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: cacoDemons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1477549886}
+    - target: {fileID: 3589961600787683720, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
+      propertyPath: cacoDemons.Array.data[2]
+      value: 
+      objectReference: {fileID: 43094609}
     - target: {fileID: 4655409982707198340, guid: 89460c1fb54fb3146a445a7604b1dc3d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

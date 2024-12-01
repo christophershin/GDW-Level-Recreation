@@ -208,3 +208,4 @@ MonoBehaviour:
   skull: 0
   soul: 0
   cacodemon: 0
+  spark: {fileID: 0}

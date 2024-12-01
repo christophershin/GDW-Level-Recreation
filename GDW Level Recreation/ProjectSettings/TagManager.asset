@@ -3,18 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemy
-  - DeathBox
-<<<<<<< Updated upstream
-  - Torch
-  - Cacodemon
-  - LostSoul
-  - Skull
-  - Imp
-  - WallTrigger
-=======
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -22,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 

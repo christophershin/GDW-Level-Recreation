@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private float horizontal;
+    private float dashHorizontal = 1; 
     public int MaxPlayerHP = 4;
     public int PlayerHP;
     public float speed;
@@ -149,9 +149,15 @@ public class PlayerController : MonoBehaviour
     {
         dashTime-=Time.deltaTime;
 
+        if(horizontal!=0)
+        {
+            dashHorizontal = horizontal;
+        }
+
+
         if(dashTime>0)
         {
-            rb.velocity = new Vector2(horizontal*DashSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(dashHorizontal*DashSpeed, rb.velocity.y);
 
         }
 
