@@ -102,12 +102,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   moveAmount: 7
-  enemyDamage: 1
+  enemyDamage: 3
   invincibleTimeMax: 1
   enemy: {fileID: 8525738341664870386}
   moveup: 0
   movedown: 0
-  moveleft: 1
+  moveleft: 0
   moveright: 0
   health: 30
   torch: 0

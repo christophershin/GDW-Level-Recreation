@@ -271,11 +271,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084279437672130603, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.45
       objectReference: {fileID: 0}
     - target: {fileID: 1084279437672130603, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 1084279437672130603, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -312,6 +312,10 @@ PrefabInstance:
     - target: {fileID: 2433985768757396294, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_Name
       value: Cacodemon 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675398848060485100, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+      propertyPath: moveleft
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2371,11 +2375,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084279437672130603, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7753906
+      value: -1.51
       objectReference: {fileID: 0}
     - target: {fileID: 1084279437672130603, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.042564
+      value: 17.31
       objectReference: {fileID: 0}
     - target: {fileID: 1084279437672130603, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2412,6 +2416,14 @@ PrefabInstance:
     - target: {fileID: 2433985768757396294, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_Name
       value: Cacodemon 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675398848060485100, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+      propertyPath: moveright
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675398848060485100, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+      propertyPath: moveAmount
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2683,6 +2695,14 @@ PrefabInstance:
     - target: {fileID: 2433985768757396294, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
       propertyPath: m_Name
       value: Cacodemon 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675398848060485100, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+      propertyPath: moveup
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675398848060485100, guid: f1995b0c123cc31429ee84bfa3f68ab2, type: 3}
+      propertyPath: moveAmount
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
