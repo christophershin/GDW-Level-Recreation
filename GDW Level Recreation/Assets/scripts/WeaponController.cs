@@ -123,7 +123,6 @@ public class WeaponController : MonoBehaviour
         if(ammo<MaxAmmo && Attack == false && reload<=0f)
         {
             ammo = MaxAmmo;
-            Debug.Log("full");
             reload = MaxReload;
 
         }
