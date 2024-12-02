@@ -6,6 +6,7 @@ using System;
 public class EnemyScript : MonoBehaviour
 {
     public float EnemySpeed;
+    public int EnemyHP;
     public float Wobble;
     public float PlayerPos;
     public float BossPos;
@@ -22,7 +23,7 @@ public class EnemyScript : MonoBehaviour
 
     public GameObject Player;
 
-    //public PlayerHP HP;
+    public PlayerController script;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,6 @@ public class EnemyScript : MonoBehaviour
         startY = transform.position.y;
         xpos = transform.position.x;
         ypos = transform.position.y;
-        //HP = gameObject.find("Player").GetComponent<PlayerHP>;
     }
 
     // Update is called once per frame
@@ -53,14 +53,16 @@ public class EnemyScript : MonoBehaviour
         }
         if (gameObject.CompareTag("Boss"))
         {
-            if(ypos > startY)
+            if (ypos > startY)
             {
                 transform.position = new Vector3(xpos - EnemySpeed, ypos - Wobble, 0.0f);
             }
-            if (ypos < startY)
+            if (ypos <= startY)
             {
                 transform.position = new Vector3(xpos - EnemySpeed, ypos + Wobble, 0.0f);
             }
+            xpos = transform.position.x;
+            ypos = transform.position.y;
             Swoop();
         }
         if (SwoopTimer > 0.00f)
@@ -80,6 +82,10 @@ public class EnemyScript : MonoBehaviour
         {
             ypos = transform.position.y;
         }
+        if (EnemyHP <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -88,10 +94,19 @@ public class EnemyScript : MonoBehaviour
         {
             EnemySpeed = EnemySpeed * -1;
         }
-        //if (Collision.gameObject.CompareTag("Player"))
-        //{
-        //  
-        //}
+        if (collision.gameObject.CompareTag("Player") && script.HitTimer <= 0.00f)
+        {
+            script.PlayerHP--;
+            script.HitTimer = 5.00f;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Weapon"))
+        {
+            EnemyHP--;
+        }
     }
 
     void Swoop()
